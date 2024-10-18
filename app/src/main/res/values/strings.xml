@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">NotesApp</string>
+    <string name="error_title">Something went wrong</string>
+    <string name="error_try_again">Try again</string>
+    <string name="all_notes_title">Your notes!</string>
+    <string name="error_unknown_error">Unknown error</string>
+    <string name="note">Note</string>
+    <string name="add_note">Add note</string>
+    <string name="save_note">Save note</string>
+    <string name="enter_your_text">Enter your text</string>
+    <string name="change_theme">Change theme</string>
+    <string name="attach_file">Attach file</string>
+    <string name="back">Back</string>
+    <string name="no_notes">No notes yet :(</string>
+    <string name="delete_note">Delete note</string>
+    <string name="title">Title</string>
+    <string name="body">Body</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favorite</string>
+    <string name="show_favorites">Show favorite</string>
+</resources>
