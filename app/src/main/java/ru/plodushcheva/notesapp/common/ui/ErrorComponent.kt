@@ -1,4 +1,4 @@
-package ru.plodushcheva.notesapp.notes.ui
+package ru.plodushcheva.notesapp.common.ui
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button

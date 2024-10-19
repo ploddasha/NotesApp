@@ -44,9 +44,12 @@ class NoteViewModel(
     }
 
     fun attachImage(imageUri: String) {
-        _state.value = (state.value as? NoteState.Content)?.copy(
-            noteItem = (state.value as? NoteState.Content)?.noteItem?.copy(imageUri = imageUri) ?: return
-        )!!
+        (state.value as? NoteState.Content)?.let {
+            _state.value = it.copy(
+                noteItem = it.noteItem.copy(imageUri = imageUri)
+            )
+        }
+
     }
 
     fun toggleFavorite() {
@@ -58,7 +61,13 @@ class NoteViewModel(
             _state.value = NoteState.Content(updatedNote)
 
             viewModelScope.launch {
-                changeFavoriteStatusUseCase(noteId, !isFavorite)
+                try {
+                    changeFavoriteStatusUseCase(noteId, !isFavorite)
+                } catch (ex: Exception) {
+                    _state.value = currentState.copy(
+                        noteItem = currentState.noteItem.copy(isFavorite = isFavorite)
+                    )
+                }
             }
         }
     }
@@ -73,8 +82,6 @@ class NoteViewModel(
                 saveNoteUseCase(NoteItem(noteId, title, body, imageUri, isFavorite))
             }
         }
-
-
     }
 
     fun deleteNote() {

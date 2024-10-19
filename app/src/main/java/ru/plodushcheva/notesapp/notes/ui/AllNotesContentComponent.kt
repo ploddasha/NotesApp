@@ -18,7 +18,6 @@ import ru.plodushcheva.notesapp.common.data.NoteItem
 fun AllNotesContentComponent(
     noteItems: List<NoteItem>,
     onItemClicked: (noteId: Int?) -> Unit
-
 ) {
     LazyColumn(
         modifier = Modifier

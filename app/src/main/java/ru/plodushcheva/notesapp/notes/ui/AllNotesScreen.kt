@@ -25,6 +25,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import ru.plodushcheva.notesapp.R
+import ru.plodushcheva.notesapp.common.ui.ErrorComponent
+import ru.plodushcheva.notesapp.common.ui.LoadingComponent
 import ru.plodushcheva.notesapp.notes.pesentation.AllNotesState
 import ru.plodushcheva.notesapp.notes.pesentation.AllNotesViewModel
 
@@ -39,6 +41,7 @@ fun AllNotesScreen(
     LaunchedEffect(Unit) {
         allNotesViewModel.loadNotes()
     }
+
     Scaffold(
         floatingActionButton = {
             AddNoteFloatingButton(

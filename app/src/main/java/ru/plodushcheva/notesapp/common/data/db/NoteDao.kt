@@ -22,7 +22,4 @@ interface NoteDao {
 
     @Query("UPDATE notes SET isFavorite = :isFavorite WHERE id = :id")
     suspend fun updateFavoriteStatus(id: Int, isFavorite: Boolean)
-
-    @Query("SELECT * FROM notes WHERE isFavorite = 1")
-    fun getFavoriteNotes(): Flow<List<NoteDB>>
 }

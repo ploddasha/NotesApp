@@ -1,4 +1,4 @@
-package ru.plodushcheva.notesapp.note.ui
+package ru.plodushcheva.notesapp.common.ui
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
